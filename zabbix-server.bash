@@ -7,7 +7,7 @@ apt update
 apt upgrade -y
 apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-nginx-conf zabbix-sql-scripts zabbix-agent mariadb-server
 echo "Mot de passe de l'utilisateur mysql zabbix"
-read -p "Password for mysql user zabbix\n" password
+read -p "Password for mysql user zabbix" password
 echo "create database zabbix character set utf8 collate utf8_bin;" | mysql
 echo "create user zabbix@localhost identified by '$password';" | mysql
 echo "grant all privileges on zabbix.* to zabbix@localhost;" | mysql
